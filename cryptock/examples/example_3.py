@@ -25,7 +25,7 @@ class Tester:
         self.symbol = symbol
         self.holding = False
 
-    def log(self, *values: List[Any]):
+    def log(self, *values):
         all_values = [self.symbol, datetime.now()]
         all_values.extend(values)
         print(', '.join([str(v) for v in all_values]))
