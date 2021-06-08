@@ -89,7 +89,6 @@ class Bot:
 
 
 def main():
-    # 분봉 정보는 어떻게 가져와서 보관할까?
     all_symbols = [ticker.get('symbol') for ticker in client.get_symbol_ticker()]
     symbols = [symbol for symbol in all_symbols if symbol.endswith('USDT')]
     for symbol in symbols:
