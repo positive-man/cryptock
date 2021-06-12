@@ -2,13 +2,12 @@
 볼린저 밴드 기반 전략에 따라 매매하고 그에 따른 평가를 수행함
 """
 import configparser
+import logging
+from dataclasses import dataclass
+from datetime import datetime
+from typing import *
 
 from binance import ThreadedWebsocketManager, Client
-
-from datetime import datetime
-from dataclasses import dataclass
-from typing import *
-import logging
 
 from metric.bollinger import Bollinger
 from utils import log
@@ -44,8 +43,6 @@ class Kline:
             vol=float(values[5]),
             close_time=datetime.fromtimestamp(values[6] / 1000)
         )
-
-        return result
 
 
 class Bot:

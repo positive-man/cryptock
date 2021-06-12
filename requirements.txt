@@ -1,4 +1,5 @@
-ccxt==1.50.96
 pandas==1.2.4
 python-binance==1.0.12
-requests~=2.25.1
+requests==2.25.1
+sqlalchemy==1.4.17
+psycopg2==2.8.6
